@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Serif';
+}
+.navbar-container {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rebeccapurple;
+}
+
+.navbar_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    width: 80%;
+}
+.nav_item {
+    color: gray;
+    text-decoration: none;
+    font-size: large;
+}
+.search_div {
+    background-color:black;
+}
+
+.header {
+    width: 100%;
+    background-image: url("https://www.itisrossi.edu.it/wp-content/themes/itisrossiweb2r/images/testarossi.jpg");
+    background-repeat: no-repeat;
+}
