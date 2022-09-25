@@ -6,11 +6,11 @@ body {
   background-color: #719ad9;
 }
 .navbar-container {
-  height: 7vh;
+  height: 6vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rebeccapurple;
+  background-color: black;
 }
 
 .navbar_div {
@@ -26,19 +26,33 @@ body {
   text-decoration: none;
   font-size: large;
 }
-.search_div {
-  background-color: black;
+.search_box {
+  background-color: white;
+  margin: 2vw;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  height: 100%;
+}
+
+.search_box > i {
+  color: black;
 }
 
 .header-image {
-  width: 100%;
-  height: 15vh;
+  width: 100vw;
+  min-height: 25vh;
+  background-color: beige;
   background-image: url("https://www.itisrossi.edu.it/wp-content/themes/itisrossiweb2r/images/testarossi.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   display: grid;
-  grid-template-columns: [first] 30% [second] 40% [third] 30%;
+  grid-template-columns: [first] 20% [second] 60% [third] 20%;
   grid-template-rows: [single-row] 100%;
   gap: 0 3%;
 }
@@ -59,6 +73,26 @@ body {
   align-self: center;
 }
 
+.titolo_scuola {
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 32px;
+  background-color: aliceblue;
+  margin-bottom: 0;
+  height: 70%;
+  opacity: 0.6;
+  background-color: aliceblue;
+  box-shadow: 8px 8px 8px #555;
+}
+
+.sottotitolo_scuola {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 20px;
+  opacity: 0.6;
+  background-color: aliceblue;
+  box-shadow: 8px 8px 8px #555;
+}
 .header_right {
   grid-column: third;
   grid-row: single-row;
@@ -69,42 +103,33 @@ body {
   align-self: center;
 }
 
-.titolo_scuola {
-  text-transform: uppercase;
-  font-weight: lighter;
-  font-size: 24px;
-  background-color: aliceblue;
-  margin-bottom: 0;
-  height: 70%;
-}
-
-.sottotitolo_scuola {
-  margin-top: 0;
-  text-transform: uppercase;
-  font-size: 14px;
-  background-color: aliceblue;
-}
-
 .slider-container {
-  height: 50vh;
-  width: 60vw;
   margin: auto;
   margin-top: 4vh;
+  width: 85vw;
   background-color: black;
+  position: relative;
 }
 
-.slider-container {
-  color: white;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  text-align: center;
+.slider_image {
+  display: block;
+  width: 100%;
+  margin: auto;
 }
 
 #left_arrow,
 #right_arrow {
   color: white;
-  width: 10%;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#left_arrow {
+  left: 1%;
+}
+#right_arrow {
+  right: 1%;
 }
 
 #image-container {
@@ -113,4 +138,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.slider_text {
+  color: white;
+  opacity: 0.6;
+  position: absolute;
+  top: 80%;
+  background-color: black;
+  width: 100%;
+  height: 20%;
+}
+
+.slider_btns {
+  width: 100%;
+  background-color: beige;
 }
