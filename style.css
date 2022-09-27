@@ -49,7 +49,6 @@ body {
 .header-image {
   width: 100vw;
   min-height: 20vh;
-  background-color: beige;
   background-image: url("https://www.itisrossi.edu.it/wp-content/themes/itisrossiweb2r/images/testarossi.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -262,16 +261,145 @@ body {
   margin: 10px;
   box-shadow: 4px 4px 4px #555;
 }
-
+.right_content_wrapper {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
 .input_box {
-  margin: 20px;
-  background-color: gray;
+  background-color: #eeeeee;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+  margin-top: 0;
 }
 .third {
+  background-color: #7fa6e8;
   width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.zoom_image_wrapper {
+  display: inline-block;
+  overflow: hidden;
+}
+.zoom_image {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.zoom_image:hover {
+  transform: scale(1.2);
+  width: 100%;
+}
+
+.calendar {
+  width: 100%;
+}
+
+.month {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.month i {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.month h1 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.weekdays {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div {
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  width: calc(100% / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.days div {
+  background-color: rebeccapurple;
+  width: calc(100% / 7);
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+  background-color: #262626;
+
+  cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #167e56;
+}
+
+.single_news {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.news_title {
+  font-weight: lighter;
+}
+.news_content_container {
+  display: grid;
+  min-height: 0;
+  min-width: 0;
+  grid-template-columns: [first] 35% [second] 65%;
+  grid-template-rows: [single-row] 100%;
+  align-items: start;
+}
+.news_date {
+}
+.news_title_text {
+  text-decoration: none;
+}
+.news_img {
+  grid-column: first;
+  grid-row: single-row;
+
+  width: 80%;
+  border: 1px solid gray;
+}
+.news_desc {
+  grid-column: second;
+  grid-row: single-row;
+  padding: 0;
+  margin-top: 0;
 }
