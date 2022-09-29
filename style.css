@@ -742,4 +742,10 @@ ul > li > a {
   #right_content {
     width: 100%;
   }
+  .single_icon {
+    flex: 0 0 calc(100% / 4);
+  }
+  .single_footer_item {
+    flex: 0 0 calc(100% / 2);
+  }
 }
