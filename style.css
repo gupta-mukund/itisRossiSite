@@ -10,13 +10,18 @@ body {
     rgba(113, 154, 217, 1),
     rgba(113, 154, 217, 0)
   );
+  font-size: 62.5%;
 }
 .navbar-container {
   height: 8vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: #222222;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .navbar_div {
@@ -30,7 +35,7 @@ body {
 .nav_item {
   color: gray;
   text-decoration: none;
-  font-size: large;
+  font-size: 1.4rem;
 }
 .search_box {
   background-color: white;
@@ -54,6 +59,7 @@ body {
 .header-image {
   width: 100vw;
   min-height: 20vh;
+  margin-top: 8vh;
   background-image: url("https://www.itisrossi.edu.it/wp-content/themes/itisrossiweb2r/images/testarossi.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -479,7 +485,22 @@ body {
 .single_footer_item {
   flex: 0 0 calc(100% / 4);
 }
+ul > li > a {
+  text-decoration: none;
+  color: white;
+}
 .wordpress_ads {
   background-color: black;
   color: white;
+  text-align: center;
+  margin-top: 2vh;
+}
+.wordpress_ads a {
+  text-decoration: none;
+  color: #418b9e;
+}
+
+.wordpress_ads a:hover {
+  text-decoration: underline;
+  color: #3a5991;
 }
