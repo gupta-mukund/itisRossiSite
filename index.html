@@ -11,8 +11,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -20,32 +19,44 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
       rel="stylesheet"
     />
     <title>Istituto Tecnico Industriale Statale Itis Rossi</title>
   </head>
   <body>
+    <!-- header -->
     <header>
       <div class="navbar-container">
-        <nav class="navbar">
-          <a href="" class="nav_item">Home</a>
-          <a href="" class="nav_item">STUDENTI</a>
-          <a href="" class="nav_item">Genitori</a>
-          <a href="" class="nav_item">Docenti</a>
-          <a href="" class="nav_item">News</a>
-          <a href="" class="nav_item">Attività</a>
-          <a href="" class="nav_item">REGISTRO</a>
-        </nav>
-        <div class="search_box">
-          <input
-            class="search-input"
-            type="text"
-            placeholder="cerca..."
-            name=""
-          />
-          <i class="fa-solid fa-magnifying-glass"></i>
+        <div id="navbar_wrapper">
+          <nav class="navbar">
+            <a href="" class="nav_item">Home</a>
+            <a href="" class="nav_item">STUDENTI</a>
+            <a href="" class="nav_item">Genitori</a>
+            <a href="" class="nav_item">Docenti</a>
+            <a href="" class="nav_item">News</a>
+            <a href="" class="nav_item">Attività</a>
+            <a href="" class="nav_item">REGISTRO</a>
+          </nav>
+
+          <div class="search_box">
+            <input
+              class="search-input"
+              type="text"
+              placeholder="cerca..."
+              name=""
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+
+        <div id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </div>
 
@@ -78,6 +89,7 @@
       <div class="slider_text">
         <a id="sliderLink" href="#"></a>
         <span id="sliderDate"></span>
+        <p id="sliderDesc"></p>
       </div>
       <div class="slider_btns">
         <div class="radio-wrapper">
