@@ -93,14 +93,14 @@ const sliderAutoChange = () => {
   changeImage();
 };
 
-//setInterval(sliderAutoChange, 2000);
+setInterval(sliderAutoChange, 3000);
 
 const date = new Date();
 
 const renderCalendar = () => {
   date.setDate(1);
 
-  const monthDays = document.querySelector(".days");
+  const monthDays = document.querySelector(".giorni");
 
   const lastDay = new Date(
     date.getFullYear(),
@@ -115,13 +115,11 @@ const renderCalendar = () => {
   ).getDate();
 
   const firstDayIndex = date.getDay();
-
   const lastDayIndex = new Date(
     date.getFullYear(),
     date.getMonth() + 1,
     0
   ).getDay();
-
   const nextDays = 7 - lastDayIndex - 1;
 
   const months = [
@@ -139,12 +137,12 @@ const renderCalendar = () => {
     "December",
   ];
 
-  document.querySelector(".date h1").innerHTML =
-    months[date.getMonth()] + " " + new Date().getFullYear();
+  document.querySelector(".data h1").innerHTML =
+    months[date.getMonth()] + " " + date.getFullYear();
 
   let days = "";
 
-  for (let x = firstDayIndex; x > 0; x--) {
+  for (let x = firstDayIndex - 1; x > 0; x--) {
     days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
   }
 
@@ -159,7 +157,7 @@ const renderCalendar = () => {
     }
   }
 
-  for (let j = 1; j <= nextDays; j++) {
+  for (let j = 1; j <= nextDays + 1; j++) {
     days += `<div class="next-date">${j}</div>`;
     monthDays.innerHTML = days;
   }
@@ -176,3 +174,22 @@ document.querySelector(".next").addEventListener("click", () => {
 });
 
 renderCalendar();
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    document.getElementById("go_up").classList.add("active");
+  } else {
+    document.getElementById("go_up").classList.remove("active");
+  }
+});
+
+document.getElementById("fontSize_change").addEventListener("click", () => {
+  var root = document.querySelector(":root");
+  if (
+    window.getComputedStyle(root, null).getPropertyValue("font-size") == "10px"
+  ) {
+    root.style.fontSize = "100%";
+  } else {
+    root.style.fontSize = "62.5%";
+  }
+});
